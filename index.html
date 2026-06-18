@@ -697,16 +697,19 @@
           Rejoignez gratuitement la communauté de ceux qui font confiance à Fidee et fidélisez vos clients !
         </p>
         <a href="comment-ca-marche.html#gerant" class="btn btn-primary"
-           data-fr="Voir le guide gérant →" data-en="See merchant guide →">
-          Voir le guide gérant →
+           data-fr="Voir le guide commerçant →" data-en="See merchant guide →">
+          Voir le guide commerçant →
         </a>
       </div>
       <div>
         <video
+          id="commercant-video"
           src="Besoin%20de%20fid%C3%A9liser%20vos%20clients%20.mp4"
           controls
+          loop
+          muted
           playsinline
-          style="width:100%; border-radius:var(--radius-xl); box-shadow:var(--shadow); display:block;"
+          style="width:100%; height:auto; border-radius:var(--radius-xl); box-shadow:var(--shadow); display:block; object-fit:contain;"
         ></video>
       </div>
     </div>
@@ -814,6 +817,23 @@
 <script src="components.js"></script>
 <script>
   initComponents();
+
+  // AUTOPLAY VIDEO ON SCROLL
+  (function () {
+    var video = document.getElementById('commercant-video');
+    if (video && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.4 });
+      observer.observe(video);
+    }
+  })();
 
   // SMOOTH SECTIONS
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
