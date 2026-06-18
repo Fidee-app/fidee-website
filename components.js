@@ -1,7 +1,8 @@
 // components.js — Shared components and utilities for FIDEE website
 
 (function () {
-  var page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  var _p = (window.location.pathname.split('/').pop() || '').toLowerCase();
+  var page = (_p === '' || _p === 'index') ? 'index.html' : (_p.includes('.') ? _p : _p + '.html');
 
   // ===== LANGUAGE =====
   window.currentLang = localStorage.getItem('fidee-lang') || 'fr';

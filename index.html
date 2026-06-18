@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIDEE — La fidélité réinventée</title>
   <meta name="description" content="FIDEE connecte les clients aux commerces locaux grâce à un programme de fidélité simple, moderne et efficace.">
-  <link rel="icon" type="image/png" sizes="32x32" href="Design%20sans%20titre%20(1).png">
+  <link rel="icon" type="image/svg+xml" href="favicon-round.svg">
   <link rel="icon" type="image/png" sizes="192x192" href="Design%20sans%20titre%20(1).png">
   <link rel="apple-touch-icon" sizes="180x180" href="Design%20sans%20titre%20(1).png">
-  <link rel="shortcut icon" href="Design%20sans%20titre%20(1).png">
+  <link rel="shortcut icon" href="favicon-round.svg">
   <link rel="stylesheet" href="style.css">
   <style>
     /* HERO */
@@ -572,6 +572,7 @@
       #commercant .container > div { grid-template-columns: 1fr !important; gap: 32px !important; }
       #commercant .container > div > div:last-child { order: -1; }
       .suggestion-fields { grid-template-columns: 1fr !important; }
+      #suggestion-commerce .section-title { font-size: clamp(19px, 5.5vw, 28px); }
     }
   </style>
 </head>
@@ -658,7 +659,7 @@
 </section>
 
 <!-- COMMERCANT CTA -->
-<section id="commercant" style="background:#fff; border-bottom:1px solid var(--border);">
+<section id="commercant" class="how-bg">
   <div class="container">
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
       <div>
@@ -696,7 +697,7 @@
 </section>
 
 <!-- COMMENT CA MARCHE -->
-<section class="how-bg" id="comment-ca-marche">
+<section id="comment-ca-marche" style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="container">
     <div class="text-center">
       <div class="section-tag"><span data-fr="Simple & Rapide" data-en="Simple & Fast">Simple & Rapide</span></div>
@@ -784,9 +785,9 @@
       <span data-fr="Votre commerce" data-en="Your store">Votre commerce</span>
     </div>
     <h2 class="section-title" style="margin-bottom:16px;"
-        data-fr="Vous ne trouvez pas votre <span>commerce préféré ?</span>"
+        data-fr="Vous ne trouvez pas votre <span>commerce préféré&nbsp;?</span>"
         data-en="Can't find your <span>favorite store?</span>">
-      Vous ne trouvez pas votre <span>commerce préféré ?</span>
+      Vous ne trouvez pas votre <span>commerce préféré&nbsp;?</span>
     </h2>
     <p class="section-subtitle" style="margin:0 auto 40px;"
        data-fr="Nous allons les contacter pour qu'ils rejoignent l'aventure Fidee !"
