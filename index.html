@@ -966,7 +966,25 @@
 
     // Switch screenshots on language change
     updateSlidesSrc(window.currentLang);
-    window._onLangChange = function(lang) { updateSlidesSrc(lang); };
+
+    // Switch video on language change
+    var _videoSrc = {
+      fr: 'Besoin%20de%20fid%C3%A9liser%20vos%20clients%20.mp4',
+      en: 'EN%20-%20Besoin%20de%20fid%C3%A9liser%20vos%20clients%20.mp4'
+    };
+    function updateVideoSrc(lang) {
+      var v = document.getElementById('commercant-video');
+      if (!v) return;
+      var src = _videoSrc[lang] || _videoSrc.fr;
+      if (v.getAttribute('src') !== src) {
+        var paused = v.paused;
+        v.setAttribute('src', src);
+        v.load();
+        if (!paused) v.play();
+      }
+    }
+    updateVideoSrc(window.currentLang);
+    window._onLangChange = function(lang) { updateSlidesSrc(lang); updateVideoSrc(lang); };
   })();
 </script>
 </body>

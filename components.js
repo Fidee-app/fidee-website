@@ -5,7 +5,10 @@
   var page = (_p === '' || _p === 'index') ? 'index.html' : (_p.includes('.') ? _p : _p + '.html');
 
   // ===== LANGUAGE =====
-  window.currentLang = localStorage.getItem('fidee-lang') || 'fr';
+  var _saved = localStorage.getItem('fidee-lang');
+  var _browser = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+  var _default = _browser.startsWith('en') ? 'en' : 'fr';
+  window.currentLang = _saved || _default;
   window._onLangChange = null;
 
   window.setLang = function (lang) {
