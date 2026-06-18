@@ -60,8 +60,9 @@
     switch (page) {
       case 'index.html':
       case '':
-        links = navLink('#comment-ca-marche', 'Comment ça marche', 'How it works')
-          + navLink('#pour-qui', 'Pour qui ?', 'For who?')
+        links = navLink('#commercant', 'Commerçants', 'Merchants')
+          + navLink('#comment-ca-marche', 'Comment ça marche', 'How it works')
+          + navLink('#suggestion-commerce', 'Suggérer un commerce', 'Suggest a store')
           + navLink('support.html', 'Support', 'Support')
           + langSwitcher()
           + ctaLink('#telecharger');
@@ -135,8 +136,9 @@
     switch (page) {
       case 'index.html':
       case '':
-        links = mobileLink('#comment-ca-marche', 'Comment ça marche', 'How it works')
-          + mobileLink('#pour-qui', 'Pour qui ?', 'For who?')
+        links = mobileLink('#commercant', 'Commerçants', 'Merchants')
+          + mobileLink('#comment-ca-marche', 'Comment ça marche', 'How it works')
+          + mobileLink('#suggestion-commerce', 'Suggérer un commerce', 'Suggest a store')
           + mobileLink('support.html', 'Support', 'Support')
           + mobileLink('#telecharger', 'Télécharger', 'Download');
         break;
