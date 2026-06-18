@@ -79,12 +79,6 @@
           + langSwitcher()
           + ctaLink('index.html#telecharger');
         break;
-      case 'telechargement-android.html':
-        links = navLink('comment-ca-marche.html', 'Comment ça marche', 'How it works')
-          + navLink('support.html', 'Support', 'Support')
-          + langSwitcher()
-          + ctaLink('index.html#telecharger');
-        break;
       case 'cgu.html':
       case 'confidentialite.html':
         links = navLink('comment-ca-marche.html', 'Comment ça marche', 'How it works')

@@ -410,6 +410,10 @@
   };
   initComponents();
 
+  if (window.location.hash === '#gerant') {
+    switchTab('merchant');
+  }
+
   function switchTab(tab) {
     document.querySelectorAll('.guide-tab').forEach(function (t, i) {
       t.classList.toggle('active', (i === 0 && tab === 'client') || (i === 1 && tab === 'merchant'));
