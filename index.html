@@ -883,6 +883,12 @@
 <script>
   initComponents();
 
+  // Re-scroll to hash after dynamic components are injected
+  if (window.location.hash) {
+    var hashTarget = document.querySelector(window.location.hash);
+    if (hashTarget) setTimeout(function () { hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+  }
+
   // AUTOPLAY VIDEO ON SCROLL
   (function () {
     var video = document.getElementById('commercant-video');
