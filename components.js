@@ -69,23 +69,15 @@
           + ctaLink('#telecharger');
         break;
       case 'comment-ca-marche.html':
-        links = navLink('index.html#comment-ca-marche', 'Comment ça marche', 'How it works')
-          + navLink('index.html#pour-qui', 'Pour qui ?', 'For who?')
-          + navLink('support.html', 'Support', 'Support')
-          + langSwitcher()
-          + ctaLink('index.html#telecharger');
-        break;
       case 'support.html':
-        links = navLink('comment-ca-marche.html', 'Comment ça marche', 'How it works')
-          + navLink('support.html', 'Support', 'Support')
-          + langSwitcher()
-          + ctaLink('index.html#telecharger');
-        break;
       case 'cgu.html':
       case 'confidentialite.html':
-        links = navLink('comment-ca-marche.html', 'Comment ça marche', 'How it works')
+        links = navLink('index.html#commercant', 'Commerçants', 'Merchants')
+          + navLink('index.html#comment-ca-marche', 'Comment ça marche', 'How it works')
+          + navLink('index.html#suggestion-commerce', 'Suggérer un commerce', 'Suggest a store')
           + navLink('support.html', 'Support', 'Support')
-          + langSwitcher();
+          + langSwitcher()
+          + ctaLink('index.html#telecharger');
         break;
       case 'reset-password.html':
         links = navLink('support.html', 'Support', 'Support')
@@ -144,20 +136,14 @@
           + mobileLink('#telecharger', 'Télécharger', 'Download');
         break;
       case 'comment-ca-marche.html':
-        links = mobileLink('index.html', 'Accueil', 'Home')
-          + mobileLink('support.html', 'Support', 'Support')
-          + mobileLink('index.html#telecharger', 'Télécharger', 'Download');
-        break;
       case 'support.html':
-        links = mobileLink('index.html', 'Accueil')
-          + mobileLink('comment-ca-marche.html', 'Comment ça marche')
-          + mobileLink('index.html#telecharger', 'Télécharger');
-        break;
       case 'cgu.html':
       case 'confidentialite.html':
-        links = mobileLink('index.html', 'Accueil')
-          + mobileLink('comment-ca-marche.html', 'Comment ça marche')
-          + mobileLink('support.html', 'Support');
+        links = mobileLink('index.html#commercant', 'Commerçants', 'Merchants')
+          + mobileLink('index.html#comment-ca-marche', 'Comment ça marche', 'How it works')
+          + mobileLink('index.html#suggestion-commerce', 'Suggérer un commerce', 'Suggest a store')
+          + mobileLink('support.html', 'Support', 'Support')
+          + mobileLink('index.html#telecharger', 'Télécharger', 'Download');
         break;
       case 'reset-password.html':
         return;
