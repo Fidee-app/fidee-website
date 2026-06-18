@@ -23,6 +23,8 @@
 
 html { scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 90px; }
 
+section[id] { scroll-margin-top: 90px; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #FFFFFF;
