@@ -66,7 +66,7 @@
       case '':
         links = navLink('#commercant', 'Commerçants', 'Merchants')
           + navLink('#comment-ca-marche', 'Comment ça marche', 'How it works')
-          + navLink('#suggestion-commerce', 'Suggérer un commerce', 'Suggest a store')
+          + navLink('#suggestionForm', 'Suggérer un commerce', 'Suggest a store')
           + navLink('support.html', 'Support', 'Support')
           + langSwitcher()
           + ctaLink('#telecharger');
@@ -77,7 +77,7 @@
       case 'confidentialite.html':
         links = navLink('index.html#commercant', 'Commerçants', 'Merchants')
           + navLink('index.html#comment-ca-marche', 'Comment ça marche', 'How it works')
-          + navLink('index.html#suggestion-commerce', 'Suggérer un commerce', 'Suggest a store')
+          + navLink('index.html#suggestionForm', 'Suggérer un commerce', 'Suggest a store')
           + navLink('support.html', 'Support', 'Support')
           + langSwitcher()
           + ctaLink('index.html#telecharger');
@@ -134,7 +134,7 @@
       case '':
         links = mobileLink('#commercant', 'Commerçants', 'Merchants')
           + mobileLink('#comment-ca-marche', 'Comment ça marche', 'How it works')
-          + mobileLink('#suggestion-commerce', 'Suggérer un commerce', 'Suggest a store')
+          + mobileLink('#suggestionForm', 'Suggérer un commerce', 'Suggest a store')
           + mobileLink('support.html', 'Support', 'Support')
           + mobileLink('#telecharger', 'Télécharger', 'Download');
         break;
@@ -144,7 +144,7 @@
       case 'confidentialite.html':
         links = mobileLink('index.html#commercant', 'Commerçants', 'Merchants')
           + mobileLink('index.html#comment-ca-marche', 'Comment ça marche', 'How it works')
-          + mobileLink('index.html#suggestion-commerce', 'Suggérer un commerce', 'Suggest a store')
+          + mobileLink('index.html#suggestionForm', 'Suggérer un commerce', 'Suggest a store')
           + mobileLink('support.html', 'Support', 'Support')
           + mobileLink('index.html#telecharger', 'Télécharger', 'Download');
         break;

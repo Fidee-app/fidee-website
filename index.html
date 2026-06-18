@@ -886,7 +886,11 @@
   // Re-scroll to hash after dynamic components are injected
   if (window.location.hash) {
     var hashTarget = document.querySelector(window.location.hash);
-    if (hashTarget) setTimeout(function () { hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+    if (hashTarget) setTimeout(function () {
+      var nav = document.getElementById('navbar');
+      var offset = nav ? nav.offsetHeight : 80;
+      window.scrollTo({ behavior: 'smooth', top: hashTarget.getBoundingClientRect().top + window.pageYOffset - offset });
+    }, 300);
   }
 
   // AUTOPLAY VIDEO ON SCROLL
@@ -936,7 +940,9 @@
       var target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var nav = document.getElementById('navbar');
+        var offset = nav ? nav.offsetHeight : 80;
+        window.scrollTo({ behavior: 'smooth', top: target.getBoundingClientRect().top + window.pageYOffset - offset });
       }
     });
   });
