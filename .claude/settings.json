@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Jean/fidi-website/**)",
+      "PowerShell(Remove-Item \"c:\\\\Users\\\\Jean\\\\fidi-website\\\\Besoin de fid�liser vos clients .mp4\" -Confirm:$false)"
+    ]
+  }
+}
