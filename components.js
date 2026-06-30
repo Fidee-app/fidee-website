@@ -8,7 +8,7 @@
   var _param = new URLSearchParams(window.location.search).get('lang');
   var _saved = localStorage.getItem('fidee-lang');
   var _browser = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
-  var _default = _browser.startsWith('en') ? 'en' : 'fr';
+  var _default = _browser.startsWith('fr') ? 'fr' : 'en';
   window.currentLang = _param || _saved || _default;
   window._onLangChange = null;
 
