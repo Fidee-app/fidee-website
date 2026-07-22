@@ -572,7 +572,7 @@
       #commercant .container > div { grid-template-columns: 1fr !important; gap: 32px !important; }
       #commercant .container > div > div:last-child { order: -1; }
       .suggestion-fields { grid-template-columns: 1fr !important; }
-      #suggestion-commerce .section-title { font-size: clamp(19px, 5.5vw, 28px); }
+      .suggestion-commerce .section-title { font-size: clamp(19px, 5.5vw, 28px); }
     }
   </style>
 </head>
@@ -779,7 +779,7 @@
 </section>
 
 <!-- SUGGESTION COMMERCE -->
-<section id="suggestion-commerce" style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+<section id="suggestionForm" class="suggestion-commerce" style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="container" style="text-align:center;">
     <div class="section-tag" style="margin:0 auto 20px;">
       <span data-fr="Votre commerce" data-en="Your store">Votre commerce</span>
@@ -794,7 +794,7 @@
        data-en="We'll reach out to them so they can join the Fidee adventure!">
       Nous allons les contacter pour qu'ils rejoignent l'aventure Fidee !
     </p>
-    <form id="suggestionForm" action="https://formspree.io/f/mqegkvwy" method="POST" onsubmit="submitSuggestion(event)"
+    <form id="suggestionFormEl" action="https://formspree.io/f/mqegkvwy" method="POST" onsubmit="submitSuggestion(event)"
           style="max-width:480px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
       <input type="hidden" name="_subject" value="Suggestion commerce">
       <div class="suggestion-fields">
@@ -913,7 +913,7 @@
   // SUGGESTION FORM
   async function submitSuggestion(e) {
     e.preventDefault();
-    var form = document.getElementById('suggestionForm');
+    var form = document.getElementById('suggestionFormEl');
     var btn = document.getElementById('suggestionBtn');
     var success = document.getElementById('suggestionSuccess');
     btn.disabled = true;
