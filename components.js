@@ -174,7 +174,7 @@
       + '<div class="footer-brand">'
       + '<a href="index.html" class="nav-logo" style="margin-bottom:16px; display:inline-flex;">'
       + '<img src="fidee_logo_blanc.svg" alt="FIDEE" class="nav-logo-image"></a>'
-      + '<p data-fr="La fidélité réinventée." data-en="Local loyalty reinvented.">La fidélité réinventée.</p>'
+      + '<p data-fr="Chaque visite compte." data-en="Every visit counts.">Chaque visite compte.</p>'
       + '</div>'
       + '<div>'
       + '<div class="footer-title" data-fr="Application" data-en="App">Application</div>'
