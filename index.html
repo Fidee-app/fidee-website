@@ -155,51 +155,17 @@
 
     .phone {
       width: 270px;
-      height: 562px;
+      aspect-ratio: 880 / 1832;
       position: relative;
       z-index: 1;
-      border-radius: 64px;
-      background: #373737;
-      box-shadow:
-        0 36px 90px rgba(0,0,0,0.28),
-        0 10px 30px rgba(0,0,0,0.16);
-      transform-style: preserve-3d;
+      filter: drop-shadow(0 30px 60px rgba(0,0,0,0.28)) drop-shadow(0 8px 20px rgba(0,0,0,0.16));
       animation: phoneFloat 7s ease-in-out infinite;
     }
 
-    .phone-screen {
-      position: absolute;
-      left: 11.659px;
-      top: 12.886px;
-      width: 804px;
-      height: 1748px;
-      transform: scale(0.3068182);
-      transform-origin: top left;
-      background: var(--card);
-      clip-path: url(#phoneScreenClip);
-      -webkit-clip-path: url(#phoneScreenClip);
-      overflow: hidden;
-      z-index: 0;
-    }
-
-    .phone-island {
-      position: absolute;
-      left: 97px;
-      top: 21px;
-      width: 76px;
-      height: 22px;
-      background: #050505;
-      border-radius: 11px;
-      z-index: 1;
-    }
-
-    .phone-frame-svg {
-      position: absolute;
-      inset: 0;
+    .phone-svg {
+      display: block;
       width: 100%;
       height: 100%;
-      z-index: 2;
-      pointer-events: none;
       overflow: visible;
     }
 
@@ -221,30 +187,6 @@
       height: 100%;
       object-fit: fill;
       display: block;
-    }
-
-    .phone-carousel-dots {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 6px;
-      z-index: 2;
-    }
-
-    .phone-carousel-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .phone-carousel-dot.active {
-      background: var(--primary);
-      transform: scale(1.3);
     }
 
     @keyframes phoneFloat {
@@ -768,35 +710,27 @@
 
       <!-- PHONE MOCKUP -->
       <div class="phone-wrapper">
-        <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-          <defs>
-            <clipPath id="phoneScreenClip" clipPathUnits="userSpaceOnUse">
-              <path d="M201.6 0C131.033 0 95.75 -0.0007 68.797 13.7324C45.0885 25.8125 25.8125 45.0885 13.7324 68.797C-0.0007 95.75 0 131.033 0 201.6V1546.4C0 1616.97 -0.0007 1652.25 13.7324 1679.2C25.8125 1702.91 45.0885 1722.19 68.797 1734.27C95.75 1748 131.033 1748 201.6 1748H602.4C672.967 1748 708.25 1748 735.203 1734.27C758.912 1722.19 778.188 1702.91 790.268 1679.2C804.001 1652.25 804 1616.97 804 1546.4V201.6C804 131.033 804.001 95.75 790.268 68.797C778.188 45.0885 758.912 25.8125 735.203 13.7324C708.25 -0.0007 672.967 0 602.4 0H201.6Z"/>
-            </clipPath>
-          </defs>
-        </svg>
         <div class="phone-glow"></div>
         <div class="phone-glow phone-glow-2"></div>
         <div class="phone-shadow"></div>
         <div class="phone">
-          <div class="phone-screen">
-            <div class="phone-carousel">
-              <div class="phone-carousel-track">
-                <img src="screenshots/screen1.PNG" data-src-fr="screenshots/screen1.PNG" data-src-en="screenshots/screen1en.PNG" alt="Capture d'écran 1" class="phone-carousel-slide" />
-                <img src="screenshots/screen2.jpg" data-src-fr="screenshots/screen2.jpg" data-src-en="screenshots/screen2en.jpg" alt="Capture d'écran 2" class="phone-carousel-slide" />
-                <img src="screenshots/screen3.jpg" data-src-fr="screenshots/screen3.jpg" data-src-en="screenshots/screen3en.jpg" alt="Capture d'écran 3" class="phone-carousel-slide" />
-                <img src="screenshots/screen4.jpg" data-src-fr="screenshots/screen4.jpg" data-src-en="screenshots/screen4en.jpg" alt="Capture d'écran 4" class="phone-carousel-slide" />
-              </div>
-              <div class="phone-carousel-dots">
-                <span class="phone-carousel-dot active"></span>
-                <span class="phone-carousel-dot"></span>
-                <span class="phone-carousel-dot"></span>
-                <span class="phone-carousel-dot"></span>
-              </div>
-            </div>
-          </div>
-          <div class="phone-island"></div>
-          <svg class="phone-frame-svg" viewBox="0 0 880 1832" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <svg class="phone-svg" viewBox="0 0 880 1832" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <clipPath id="phoneScreenClip" clipPathUnits="userSpaceOnUse">
+    <path d="M239.6 42C169.033 42 133.75 41.9993 106.797 55.7324C83.0885 67.8125 63.8125 87.0885 51.7324 110.797C37.9993 137.75 38 173.033 38 243.6V1588.4C38 1658.97 37.9993 1694.25 51.7324 1721.2C63.8125 1744.91 83.0885 1764.19 106.797 1776.27C133.75 1790 169.033 1790 239.6 1790H640.4C710.967 1790 746.25 1790 773.203 1776.27C796.912 1764.19 816.188 1744.91 828.268 1721.2C842.001 1694.25 842 1658.97 842 1588.4V243.6C842 173.033 842.001 137.75 828.268 110.797C816.188 87.0885 796.912 67.8125 773.203 55.7324C746.25 41.9993 710.967 42 640.4 42H239.6Z"/>
+  </clipPath>
+</defs>
+<foreignObject x="38" y="42" width="804" height="1748" clip-path="url(#phoneScreenClip)">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="phone-carousel">
+    <div class="phone-carousel-track">
+      <img src="screenshots/image00001.png" data-src-fr="screenshots/image00001.png" data-src-en="screenshots/image00001en.png" alt="Capture d'écran 1" class="phone-carousel-slide" />
+      <img src="screenshots/image00003.png" data-src-fr="screenshots/image00003.png" data-src-en="screenshots/image00003en.png" alt="Capture d'écran 3" class="phone-carousel-slide" />
+      <img src="screenshots/image00004.png" data-src-fr="screenshots/image00004.png" data-src-en="screenshots/image00004en.png" alt="Capture d'écran 4" class="phone-carousel-slide" />
+      <img src="screenshots/image00002.png" data-src-fr="screenshots/image00002.png" data-src-en="screenshots/image00002en.png" alt="Capture d'écran 2" class="phone-carousel-slide" />
+    </div>
+  </div>
+</foreignObject>
+<rect x="316" y="70" width="248" height="72" rx="36" fill="#050505"/>
 <g id="iPhone 17 Pro Cosmic orange">
 <g id="Phone">
 <mask id="mask0_2206_1403" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-10" y="0" width="896" height="1832">
@@ -1483,7 +1417,6 @@
   // PHONE CAROUSEL
   (function() {
     var track = document.querySelector('.phone-carousel-track');
-    var dots = document.querySelectorAll('.phone-carousel-dot');
     var slides = document.querySelectorAll('.phone-carousel-slide');
     var current = 0;
     var total = slides.length;
@@ -1498,14 +1431,7 @@
     function goTo(index) {
       current = (index + total) % total;
       track.style.transform = 'translateX(-' + (current * 100) + '%)';
-      dots.forEach(function(d, i) {
-        d.classList.toggle('active', i === current);
-      });
     }
-
-    dots.forEach(function(dot, i) {
-      dot.addEventListener('click', function() { goTo(i); });
-    });
 
     setInterval(function() { goTo(current + 1); }, 3500);
 
