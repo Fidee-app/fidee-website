@@ -1465,7 +1465,9 @@
     function updateVideoSrc(lang) {
       var v = document.getElementById('commercant-video');
       if (!v) return;
-      var src = _videoSrc[lang] || _videoSrc.fr;
+      // Only a French and an English cut exist — every other language falls
+      // back to English (not French, which would be unwatchable for them).
+      var src = _videoSrc[lang] || _videoSrc.en;
       if (v.getAttribute('src') !== src) {
         var paused = v.paused;
         v.setAttribute('src', src);
