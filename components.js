@@ -1,4 +1,4 @@
-// components.js — Shared components and utilities for FIDEE website
+// components.js: Shared components and utilities for FIDEE website
 
 (function () {
   var _p = (window.location.pathname.split('/').pop() || '').toLowerCase();
@@ -63,7 +63,7 @@
   }
 
   // Same compact pill as desktop, just set off from the links above by a
-  // divider — kept out of langSwitcherDiv() so the pill itself never stretches.
+  // divider. Kept out of langSwitcherDiv() so the pill itself never stretches.
   function mobileLangRow() {
     return '<div class="mobile-nav-langrow">' + langSwitcherDiv() + '</div>';
   }
@@ -147,7 +147,7 @@
     el.replaceWith(nav);
 
     // Single source of truth for the hamburger click: delegated on `nav`
-    // (click for mouse/desktop, touchend for touch — touchend's preventDefault
+    // (click for mouse/desktop, touchend for touch; touchend's preventDefault
     // stops the browser from also firing the synthetic click that would
     // otherwise follow, toggling the menu open then immediately shut).
     nav.addEventListener('click', function (e) {
